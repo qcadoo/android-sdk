@@ -247,58 +247,12 @@
 			<id>conjars</id>
 			<url>http://conjars.org/repo/</url>
 		</pluginRepository>
-		<pluginRepository>
-			<id>qcadoo-snapshots-repository</id>
-			<url>http://nexus.qcadoo.org/content/repositories/snapshots</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>qcadoo-releases-repository</id>
-			<url>http://nexus.qcadoo.org/content/repositories/releases</url>
-		</pluginRepository>
 	</pluginRepositories>
 
-	<repositories>
-		<repository>
-			<id>qcadoo-releases-repository</id>
-			<url>http://nexus.qcadoo.org/content/repositories/releases</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-				<updatePolicy>never</updatePolicy>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>qcadoo-snapshots-repository</id>
-			<url>http://nexus.qcadoo.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>interval:5</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<distributionManagement>
-		<repository>
-			<id>qcadoo-releases-repository</id>
-			<url>http://nexus.qcadoo.org/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>qcadoo-snapshots-repository</id>
-			<url>http://nexus.qcadoo.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	<scm>
-	    <connection>scm:git:ssh://github.com/mobeelizer/android-sdk.git</connection>
-        <developerConnection>scm:git:git@github.com:mobeelizer/android-sdk.git</developerConnection>
-        <url>http://github.com/mobeelizer/android-sdk</url>
+	    <connection>scm:git:ssh://github.com/qcadoo/android-sdk.git</connection>
+        <developerConnection>scm:git:git@github.com:qcadoo/android-sdk.git</developerConnection>
+        <url>http://github.com/qcadoo/android-sdk</url>
     <tag>HEAD</tag>
   </scm>
   
