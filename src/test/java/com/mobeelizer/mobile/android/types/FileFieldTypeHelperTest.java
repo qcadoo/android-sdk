@@ -37,6 +37,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -274,13 +275,14 @@ public class FileFieldTypeHelperTest {
         when(cursor.getString(13)).thenReturn("guid");
         when(cursor.getString(14)).thenReturn("name");
 
-        Map<String, String> map = mock(Map.class);
+        Map<String, String> map = new HashMap<String, String>();
 
         // when
         FieldType.FILE.setValueFromDatabaseToMap(cursor, map, fieldFile, options);
 
         // then
-        verify(map).put("file", "{'guid':'guid','filename':'name'}".replaceAll("'", "\""));
+        Assert.assertTrue(map.get("file").contains("'guid':'guid'".replace("'", "\"")));
+        Assert.assertTrue(map.get("file").contains("'filename':'name'".replace("'", "\"")));
     }
 
     @Test
